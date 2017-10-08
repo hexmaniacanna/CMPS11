@@ -1,0 +1,29 @@
+/*
+ * Annabel Maokhamphiou 
+ * TimeConverter
+ * changes standard time to military time 
+ */
+import java.util.*;
+
+public class DoggoYears {
+
+	public static void main(String[] args) {
+		int dogYear;
+		
+		Scanner dogYearReader = new Scanner(System.in); //read user input 
+		
+		dogYear = dogYearReader.nextInt(); // save user input 
+		
+		if(dogYear == 1) {
+			System.out.println(14);
+		}
+		else if(dogYear == 2) {
+			System.out.println(22);
+		}
+		else {
+			dogYear = (5 * dogYear) + 12;
+			System.out.println(dogYear);
+		}
+	}
+
+}
