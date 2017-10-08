@@ -1,0 +1,37 @@
+/*
+ * Annabel Maokhamphiou
+ * GradeSheet
+ * creating a grade sheet that prints out last name 
+ * and score with padded zeros 
+ */
+import java.util.*;
+
+public class GradeSheet {
+
+	public static void main(String[] args) {
+		int arrayLength; // number of students 
+		String[] lastName; // last name array declared
+		int[] score; // score array declared
+		Scanner scanner = new Scanner(System.in); //declare and initialize scanner 
+		
+		arrayLength = scanner.nextInt(); //saving user input 
+		lastName = new String[arrayLength]; //initializing an array for the student last names 
+		score = new int[arrayLength]; //initializing array for students score 
+		
+		for (int i = 0; i < arrayLength; i++) {
+			lastName[i] = scanner.next(); // saves the last name in the i position of the array 
+			score[i] = scanner.nextInt();  
+		}
+		for (int j = 0; j < arrayLength; j++) { // instead of printing out name and score as you input them, print them all after
+			System.out.format("%-10s %03d %n", lastName[j], score[j]); // %-10s left justified 10 spaces, %03d 3 digit int padded with 0's, %n new line
+			/*
+			 * my initial solution was tedious, so i looked up an easier way to format the output 
+			 * for last name and score
+			 * i found information on docs.oracle.com, stacked overflow, and in a further google search
+			 * for system.out.format 
+			 */
+			
+		}
+	}
+
+}
